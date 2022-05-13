@@ -1,0 +1,42 @@
+.Sidebar {
+    height: 100%;
+    width: 250px;
+    background-color: #212121;
+    color: aliceblue;
+}
+
+.SidebarList {
+    height: auto;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.SidebarList .row:hover {
+    cursor: pointer;
+    background-color: #373737;
+}
+
+.SidebarList #active {
+    background-color: #373737; 
+}
+
+.SidebarList .row {
+    width: 100%;
+    height: 50px;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.row #icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+
+.row #title {
+    flex: 70%;
+}

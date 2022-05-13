@@ -1,0 +1,26 @@
+.Card img {
+    width: 230px;
+    height: 230px;
+    border-radius: 10px;
+    margin: 0px;
+}
+
+.collection-name {
+    color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E2225;
+    width: 270px;
+    height: 275px;
+    margin: 25px;
+    border-radius: 10px;
+    padding: 0px;
+}
