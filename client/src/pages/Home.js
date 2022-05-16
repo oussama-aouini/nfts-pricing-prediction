@@ -1,17 +1,14 @@
 import React from 'react'
-import Sidebar from '../components/Sidebar'
-import Topbar from '../components/Topbar'
-import CardList from '../components/CardList'
-import '../App.css'
 
-function Home() {
+import CardList from '../components/CardList'
+
+import './Home.css'
+
+function Home({collections}) {
+
   return (
-    <div>
-        <Topbar />
-        <div className='app-page'>
-            <Sidebar />
-            <CardList />
-        </div>
+    <div className='home'>
+      <CardList collections={collections} />
     </div>
   )
 }

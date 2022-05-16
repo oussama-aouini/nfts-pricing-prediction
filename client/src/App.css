@@ -1,18 +1,16 @@
 body {
     margin: 0;
-    padding: 0;
+    height: 100%;
 }
 
 .App {
-    background: #181818;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
-.app-page {
+.app-body {
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    height: 90vh;
 }
+

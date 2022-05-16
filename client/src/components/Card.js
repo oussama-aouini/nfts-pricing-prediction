@@ -1,11 +1,11 @@
 import React from 'react'
 import './Card.css'
 
-function Card({movie}) {
+function Card({collection}) {
   return (
     <div className='Card'>
-        <img src={movie.data.avatar} />
-        <h2 className='collection-name'>{movie.data.collection}</h2>
+        <img src={collection.data.avatar} alt={collection.data.collection} />
+        <p className='collection-name'>{collection.data.collection}</p>
     </div>
   )
 }

@@ -1,12 +1,14 @@
 import {useEffect, useState} from 'react';
-import './App.css'
-import Sidebar from "./components/Sidebar"
-import Topbar from './components/Topbar'
+import { Doughnut } from 'react-chartjs-2';
+
+import Home from './pages/Home';
+import Sidebar from './components/Sidebar';
+import Topbar from './components/Topbar';
 import CardList from './components/CardList';
 
-const API_URL = 'https://api.solscan.io/collection?sortBy=volume&offset=0&limit=8'
+import './App.css'
 
-// export const MoviesContext = React.createContext()
+const API_URL = 'https://api.solscan.io/collection?sortBy=volume&offset=0&limit=80'
 
 const App = () => {
   const [collections, setCollections] = useState([])
@@ -25,9 +27,9 @@ const App = () => {
   return (
     <div className="App">
       <Topbar />
-      <div className='app-page'>
+      <div className='app-body'>  
         <Sidebar />
-        <CardList movies={collections} />
+        <CardList collections={collections} />
       </div>
     </div>
   );

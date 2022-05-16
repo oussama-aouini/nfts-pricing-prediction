@@ -1,8 +1,13 @@
 .Sidebar {
-    height: 100%;
-    width: 250px;
+    display: flex;
+    height: auto;
+    width: 15vw;
     background-color: #212121;
     color: aliceblue;
+    position: -webkit-sticky; /* for Safari users */
+    position: sticky;
+    top: 0px;
+    float: right;
 }
 
 .SidebarList {
