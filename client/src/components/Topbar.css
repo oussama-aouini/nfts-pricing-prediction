@@ -1,7 +1,14 @@
 .Topbar {
     background-color: #202020;
-    height: 10vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.Topbar img {
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    left: 0%;
 }

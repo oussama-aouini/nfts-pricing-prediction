@@ -24,6 +24,8 @@ const App = () => {
     getCollections();
   }, []);
 
+
+
   return (
     <div className="App">
       <Topbar />

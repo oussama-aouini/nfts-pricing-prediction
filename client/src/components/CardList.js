@@ -10,7 +10,7 @@ function CardList({collections}) {
 
   const [pageNumber, setPageNumber] = useState(0)
 
-  const collectionsPerPage = 8
+  const collectionsPerPage = 8*3
   const currentPage = pageNumber * collectionsPerPage
   const currentPosts = collections.slice(currentPage, currentPage + collectionsPerPage)
 
@@ -23,7 +23,7 @@ function CardList({collections}) {
   return (
     <div className='CardList'>
       <div className='Cards'>
-      {
+        {
           currentPosts.map((collection) =>(
             <Card collection={collection} />
           ))
@@ -33,7 +33,7 @@ function CardList({collections}) {
         previousLabel = {'Prev'}
         nextLabel = {'Next'}
         breakLabel={'...'}
-        pageCount={10}
+        pageCount={4}
         marginPagesDisplayed={3}
         onPageChange={changePage}
         containerClassName={'paginationBttns'}

@@ -8,6 +8,7 @@
     position: sticky;
     top: 0px;
     float: right;
+    overflow: hidden;
 }
 
 .SidebarList {
@@ -24,6 +25,7 @@
 
 .SidebarList #active {
     background-color: #373737; 
+    border-left: solid 3px orange;
 }
 
 .SidebarList .row {

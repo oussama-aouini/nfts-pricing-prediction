@@ -1,7 +1,7 @@
 .Card img {
     width: 210px;
-    height: 210px;
-    border-radius: 10px;
+    height: 200px;
+    
     margin: 0px;
 }
 
@@ -22,4 +22,11 @@
     height: 245px;
     margin: 25px;
     padding: 0px;
+    border-radius: 10px;
+}
+
+.Card:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    z-index: 2;
 }
