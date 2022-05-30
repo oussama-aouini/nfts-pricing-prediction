@@ -4,10 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-cloudscraper = "*"
-pandas = "*"
-numpy = "*"
-statsmodels = "*"
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+sqlalchemy = "*"
 
 [dev-packages]
 
