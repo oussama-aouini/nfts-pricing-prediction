@@ -12,3 +12,18 @@
     position: absolute;
     left: 0%;
 }
+
+.Topbar button {
+    position: absolute;
+    right: 2%;
+    border-color: orange;
+    background-color: #181818;
+    color: orange;
+    padding: 7px 9px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.Topbar button:hover {
+    cursor: pointer;
+}

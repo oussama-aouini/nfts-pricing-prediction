@@ -38,6 +38,7 @@
     list-style: none;
     display: flex;
     margin-right: 15vw;
+    font-family: sans-serif;
 }
 
 .paginationBttns a {
@@ -57,4 +58,19 @@
 .paginationActive a {
     color: white;
     background-color: orange;
+}
+
+.list-label {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: baseline;
+    margin-left: 25px;
+    font-size: larger;
+    height: 28px;
+}
+
+.list-label p {
+    margin-left: 8px;
 }

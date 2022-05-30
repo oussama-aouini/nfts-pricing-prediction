@@ -1,6 +1,7 @@
-import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
 import ReactPaginate from 'react-paginate'
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 import Card from './Card'
 
@@ -12,22 +13,27 @@ function CardList({collections}) {
 
   const collectionsPerPage = 8*3
   const currentPage = pageNumber * collectionsPerPage
-  const currentPosts = collections.slice(currentPage, currentPage + collectionsPerPage)
+  const currentCollections = collections.slice(currentPage, currentPage + collectionsPerPage)
 
 
   const changePage = ({selected}) => {
     setPageNumber(selected)
-    console.log(selected)
   }
 
   return (
     <div className='CardList'>
+      <div className="list-label">
+        <TrendingUpIcon /><p>Trending Collections</p>
+      </div>
       <div className='Cards'>
         {
-          currentPosts.map((collection) =>(
-            <Card collection={collection} />
+          currentCollections.map((collection) =>(
+            <Link to={`collection/${collection.data.collectionId}`} style={{ textDecoration: 'none' }}>
+              <Card key={collection.data.collectionId} collection={collection} />
+            </Link>
           ))
         }
+        
       </div>
       <ReactPaginate 
         previousLabel = {'Prev'}

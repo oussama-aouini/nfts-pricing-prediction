@@ -9,7 +9,8 @@ function Topbar() {
   return (
     <div className='Topbar'>
       <img src={logo} />
-        <Searchbar />
+      <Searchbar />
+      <button>SIGN IN</button>
     </div>
   )
 }

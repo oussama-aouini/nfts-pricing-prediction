@@ -1,15 +1,10 @@
-body {
-    margin: 0;
-    height: 100%;
-}
-
 .App {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.app-body {
+.content {
     display: flex;
     height: 92vh;
 }

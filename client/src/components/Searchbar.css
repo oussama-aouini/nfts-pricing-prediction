@@ -1,4 +1,9 @@
-.Searchbar input {
+.search-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input input {
     width: 300px;
     height: 30px;
     font-size: 20px;
@@ -9,11 +14,11 @@
     border-radius: 25px;
 }
 
-.Searchbar input:focus {
+.search-input input:focus {
     outline: none;
 }
 
-.Searchbar {
+.search-input {
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -23,9 +28,64 @@
     padding-right: 10px;
 }
 
-.Searchbar:hover {
+.search-input:hover {
     border: 2px solid orange ;
 }
 
+.search-results {
+    background-color: #282828;
+    position: absolute;
+    top: 55px;
+    left: 38.5%;
+    right: 38.5%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 150px;
+    border-radius: 10px;
+    padding-top: 225px;
+}
 
+.result-item {
+    list-style-type: none;
+    height: 50px;
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 5px;
+}
 
+.result-item:hover {
+    cursor: pointer;
+    background-color: #373737;
+}
+
+.search-results::-webkit-scrollbar {
+    width: 10px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.search-results:hover::-webkit-scrollbar-thumb {
+    background: #4A4A4A; 
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.image-container {
+    height: 50px;
+    width: 60px;
+}

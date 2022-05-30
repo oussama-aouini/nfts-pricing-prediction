@@ -8,7 +8,7 @@ export const SidebarData = [
     {
         title: "Home",
         icon: <HomeIcon />,
-        link: "/home"
+        link: "/"
     },
     {
         title: "Profile",
@@ -23,6 +23,6 @@ export const SidebarData = [
     {
         title: "Favorite",
         icon: <FavoriteIcon />,
-        link: "/favotite"
+        link: "/favorite"
     }
 ]

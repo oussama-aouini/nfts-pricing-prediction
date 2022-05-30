@@ -1,4 +1,4 @@
-.loading {
+.favorites-page {
     background-color: #181818;
     height: 92vh;
     width: 85vw;
@@ -7,4 +7,5 @@
     align-items: center;
     margin: 0;
     overflow: hidden;
+    color: white;
 }
