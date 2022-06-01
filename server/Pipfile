@@ -9,6 +9,8 @@ uvicorn = {extras = ["standard"], version = "*"}
 pandas = "*"
 requests = "*"
 statsmodels = "*"
+sqlalchemy = "*"
+passlib = {extras = ["bcrypt"], version = "*"}
 
 [dev-packages]
 
