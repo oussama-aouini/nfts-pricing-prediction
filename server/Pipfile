@@ -11,6 +11,7 @@ requests = "*"
 statsmodels = "*"
 sqlalchemy = "*"
 passlib = {extras = ["bcrypt"], version = "*"}
+python-jose = "*"
 
 [dev-packages]
 
