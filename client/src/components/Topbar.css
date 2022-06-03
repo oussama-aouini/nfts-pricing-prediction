@@ -22,8 +22,11 @@
     padding: 7px 9px;
     font-size: 14px;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 .Topbar button:hover {
     cursor: pointer;
+    background-color: orange;
+    color: white;
 }

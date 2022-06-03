@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, status, HTTPException
 from sqlalchemy.orm import Session
 
-from .. import schemas, models, hashing
+from .. import schemas, models, hashing, oauth2
 from ..database import get_db
 
 router = APIRouter(
@@ -17,9 +17,9 @@ def add_to_history(request: schemas.History, db: Session = Depends(get_db)):
     db.refresh(new_collection)
     return new_collection
 
-# @router.get('/{id}')
-# def get_user_history():
-#     pass
+@router.get('/{id}')
+def get_user_history(current_user: schemas.User = Depends(oauth2.get_current_user)):
+    return 'done'
 
 # @router.put('/{id}')
 # def update_time():

@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Union
+from typing import Union, List
 
 class User(BaseModel):
     username: str
@@ -10,6 +10,15 @@ class User(BaseModel):
     premium: bool
     trials: int
     photo: str
+
+class Favorite(BaseModel):
+    user_id: int
+    collection_id: str
+
+class History(BaseModel):
+    user_id: int
+    collection_id: str
+    time: int
     
 class ShowUser(BaseModel):
     username: str
@@ -19,17 +28,10 @@ class ShowUser(BaseModel):
     premium: bool
     trials: int
     photo: str
+    history: List
+    favorites: List
     class Config():
         orm_mode = True
-
-class Favorite(BaseModel):
-    user_id: str
-    collection_id: str
-
-class History(BaseModel):
-    user_id: str
-    collection_id: str
-    time: float
 
 class Login(BaseModel):
     username: str

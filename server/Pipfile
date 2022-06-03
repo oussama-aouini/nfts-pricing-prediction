@@ -12,6 +12,7 @@ statsmodels = "*"
 sqlalchemy = "*"
 passlib = {extras = ["bcrypt"], version = "*"}
 python-jose = "*"
+python-multipart = "*"
 
 [dev-packages]
 

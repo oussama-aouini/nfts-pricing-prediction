@@ -1,7 +1,9 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 
 from forecasting.preprocessors import get_data, avg_price_preprocessor
 from forecasting.predictors import avg_price_predictor
+
+# from ..crud import schemas, oauth2
 
 router = APIRouter(
     tags=["forecasting"]

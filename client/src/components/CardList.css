@@ -39,6 +39,7 @@
     display: flex;
     margin-right: 15vw;
     font-family: sans-serif;
+    font-weight: bolder;
 }
 
 .paginationBttns a {
@@ -69,6 +70,7 @@
     margin-left: 25px;
     font-size: larger;
     height: 28px;
+    font-family: sans-serif;
 }
 
 .list-label p {
