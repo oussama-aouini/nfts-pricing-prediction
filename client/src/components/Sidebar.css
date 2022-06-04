@@ -47,3 +47,24 @@
 .row #title {
     flex: 70%;
 }
+
+.log-out {
+    position: absolute;
+    bottom: 0px;
+    border-top: 2px solid #373737;
+    height: 50px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    padding-left: 20px;
+}
+
+.log-out p {
+    margin-left: 10px;
+}
+
+.log-out:hover {
+    cursor: pointer;
+    background-color: #373737;
+}

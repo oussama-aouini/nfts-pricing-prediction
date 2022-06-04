@@ -15,6 +15,8 @@ const ChartPage = ({ match }) => {
 
   return (
     <div className="chart-page">
+      <h1>Collection Name</h1>
+      {console.log(match)}
       <div className="charts-container">
         <div className="tabs">
           <div

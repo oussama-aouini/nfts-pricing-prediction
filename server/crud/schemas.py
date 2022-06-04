@@ -19,6 +19,18 @@ class History(BaseModel):
     user_id: int
     collection_id: str
     time: int
+
+
+class ShowFavorite(BaseModel):
+    collection_id: str
+    class Config():
+        orm_mode = True
+
+class ShowHistory(BaseModel):
+    collection_id: str
+    time: int
+    class Config():
+        orm_mode = True
     
 class ShowUser(BaseModel):
     username: str
@@ -28,8 +40,8 @@ class ShowUser(BaseModel):
     premium: bool
     trials: int
     photo: str
-    history: List
-    favorites: List
+    history: List[ShowHistory] = []
+    favorites: List[ShowFavorite] = []
     class Config():
         orm_mode = True
 

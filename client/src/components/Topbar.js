@@ -1,18 +1,25 @@
-import React from 'react'
-import Searchbar from './Searchbar'
+import React from "react";
 
-import logo from '../assets/logo.png'
+import Searchbar from "./Searchbar";
 
-import './Topbar.css'
+import logo from "../assets/logo.png";
+
+import "./Topbar.css";
 
 function Topbar() {
   return (
-    <div className='Topbar'>
+    <div className="Topbar">
       <img src={logo} />
       <Searchbar />
-      <button>SIGN IN</button>
+      <button
+        onClick={() => {
+          window.location.pathname = "login";
+        }}
+      >
+        SIGN IN
+      </button>
     </div>
-  )
+  );
 }
 
-export default Topbar
+export default Topbar;

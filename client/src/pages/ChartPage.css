@@ -5,6 +5,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.chart-page h1 {
+    color: white;
+    font-family: sans-serif;
+    margin-top: 0px;
+    margin-bottom: 40px;
 }
 
 .charts-container {

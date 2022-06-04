@@ -1,6 +1,7 @@
 import React from 'react'
 import './Sidebar.css'
 import {SidebarData} from './SidebarData'
+import LogoutIcon from '@mui/icons-material/Logout';
 
 function Sidebar() {
   return (
@@ -22,6 +23,10 @@ function Sidebar() {
           )
         })}
       </ul>
+      <div className='log-out'>
+        <LogoutIcon />
+        <p>Log out</p>
+      </div>
     </div>
   )
 }
