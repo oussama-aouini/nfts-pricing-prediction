@@ -15,7 +15,6 @@ const ChartPage = ({ match }) => {
 
   return (
     <div className="chart-page">
-      <h1>Collection Name</h1>
       {console.log(match)}
       <div className="charts-container">
         <div className="tabs">
@@ -39,7 +38,9 @@ const ChartPage = ({ match }) => {
           </div>
         </div>
         <div className="chart-box">
-          <Chart collection_id={collection_id} />
+          {activeTab == 1 ? <Chart collection_id={collection_id} /> : ""}
+          {activeTab == 2 ? "num sales" : ""}
+          {activeTab == 3 ? "floor price" : ""}
         </div>
       </div>
     </div>

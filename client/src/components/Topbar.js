@@ -4,9 +4,14 @@ import Searchbar from "./Searchbar";
 
 import logo from "../assets/logo.png";
 
+import AuthContext from '../context/UserContext'
+import { useContext } from 'react'
+
 import "./Topbar.css";
 
 function Topbar() {
+  const {auth} = useContext(AuthContext)
+
   return (
     <div className="Topbar">
       <img src={logo} />
@@ -16,7 +21,7 @@ function Topbar() {
           window.location.pathname = "login";
         }}
       >
-        SIGN IN
+        {auth.username? auth.username :" SIGN IN"}
       </button>
     </div>
   );

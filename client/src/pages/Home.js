@@ -3,6 +3,7 @@ import BeatLoader from "react-spinners/BeatLoader";
 
 import CardList from "../components/CardList";
 
+
 import './Home.css'
 
 const API_URL =

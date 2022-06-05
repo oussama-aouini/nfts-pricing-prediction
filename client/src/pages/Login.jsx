@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { Redirect } from 'react-router-dom'
+
+import AuthContext from "../context/UserContext";
 
 import "./Login.css";
 
 const Login = () => {
+
+  const {auth, setAuth} = useContext(AuthContext)
+
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [loged, setLoged] = useState(false)
+
+  const get_user = async () => {
+    const response = await fetch(`http://127.0.0.1:8000/user/1`)
+    const data = await response.json()
+    setAuth(data)
+  }
+
+  const login = () => {
+    get_user()
+    setLoged(true)
+  }
+
+  if (loged) {
+    return <Redirect to={'/'} />
+  }
+
   return (
     <div className="login-page">
       <div className="login-description">
@@ -13,13 +38,11 @@ const Login = () => {
         </p>
       </div>
       <div className="login-form">
-        <form action="">
-          <input type="text" placeholder="username" />
-          <input type="password" placeholder="password" />
-          <button>Log In</button>
+          <input type="text" placeholder="username" onChange={(e) => setUsername(e.target.value)} />
+          <input type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
+          <button onClick={login}>Log In</button>
           <div className="sing-up">
           </div>
-        </form>
         <button style={{width: "100px"}}
               onClick={() => {
                 window.location.pathname = "/signup";
