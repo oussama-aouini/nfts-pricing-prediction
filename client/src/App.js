@@ -1,5 +1,6 @@
 import { useContext } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { ProtectedRoute } from './components/ProtectedRoute'
 
 import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
@@ -17,23 +18,25 @@ import './App.css'
 
 const App = () => {
   const {auth} = useContext(AuthContext)
-  {console.log(auth)}
+  console.log(auth)
   return (
     <div className="App">
       <Router>
-        {['/login', '/signup'].includes(window.location.pathname) ? "" : <Topbar />}
-        <div className='content'>  
-          {['/login', '/signup'].includes(window.location.pathname) ? "" : <Sidebar />}
-            <Switch>
+        <Switch>
+          <Route path='/login' component={Login} />
+          <Route path='/signup' component={SignUp} />
+          <div>
+            <Topbar />
+            <div className='content'>  
+              <Sidebar />
               <Route path='/' exact component={Home} />
               <Route path='/profile' component={Profile} />
               <Route path='/favorite' component={Favorite} />
               <Route path='/history' component={History} />
               <Route path='/collection/:id' component={ChartPage} />
-              <Route path='/login' component={Login} />
-              <Route path='/signup' component={SignUp} />
-            </Switch>
-        </div>
+            </div>
+          </div>
+        </Switch>
       </Router>
     </div>
   );

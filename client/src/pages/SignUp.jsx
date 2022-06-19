@@ -1,8 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import './SignUp.css'
 
-const SignUp = () => {
+const SignUp = ({history}) => {
+  const [loged, setLoged] = useState(false)
+
+  const login = () => {
+    setLoged(true)
+  }
+
+  if (loged) {
+    history.push('/')
+  }
+
   return (
     <div className="signup-page">
         <div className="signup-form">
@@ -14,7 +24,7 @@ const SignUp = () => {
             <input type="text" placeholder='username' />
             <input type="email" placeholder='email' />
             <input type="password" placeholder='password' />
-            <button>Create account</button>
+            <button onClick={login}>Create account</button>
         </div>
     </div>
   )

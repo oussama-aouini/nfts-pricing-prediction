@@ -17,8 +17,8 @@ def add_to_history(request: schemas.History, db: Session = Depends(get_db)):
     db.refresh(new_collection)
     return new_collection
 
-@router.get('/{id}')
-def get_user_history(current_user: schemas.User = Depends(oauth2.get_current_user)):
+@router.get('/{user_id}')
+def get_user_history(user_id, current_user: schemas.User = Depends(oauth2.get_current_user)):
     return 'done'
 
 # @router.put('/{id}')

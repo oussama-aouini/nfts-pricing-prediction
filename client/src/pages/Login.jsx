@@ -1,11 +1,10 @@
 import React, { useState, useContext } from "react";
-import { Redirect } from 'react-router-dom'
 
 import AuthContext from "../context/UserContext";
 
 import "./Login.css";
 
-const Login = () => {
+const Login = ({history}) => {
 
   const {auth, setAuth} = useContext(AuthContext)
 
@@ -25,7 +24,7 @@ const Login = () => {
   }
 
   if (loged) {
-    return <Redirect to={'/'} />
+    history.push('/')
   }
 
   return (

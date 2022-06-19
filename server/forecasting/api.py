@@ -17,9 +17,9 @@ def predict_avg_price(collection_id):
     return predictions
 
 @router.get('/floor_price')
-def predict_floor_price():
+def predict_floor_price(collection_id):
     pass
 
 @router.get('/sales_volume')
-def predict_sales_volume():
+def predict_sales_volume(collection_id):
     pass

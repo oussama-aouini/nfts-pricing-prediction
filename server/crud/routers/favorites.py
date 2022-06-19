@@ -26,9 +26,10 @@ def remove_favorite(id, db: Session = Depends(get_db)):
     db.commit()
     return 'done'
 
-# @router.get('/{id}')
-# def get_user_favorites(id, db: Session = Depends(get_db)):
-#     collection = db.query(models.Favorite).filter(models.Favorite.id == id).first()
-#     if not collection:
-#         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f'Collection with id {id} is not available')
-#     return collection
+@router.get('/{user_id}')
+def get_user_favorites(user_id, db: Session = Depends(get_db)):
+    # collection = db.query(models.Favorite).filter(models.Favorite.id == id).first()
+    # if not collection:
+    #     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f'Collection with id {id} is not available')
+    # return collection
+    return 'done'

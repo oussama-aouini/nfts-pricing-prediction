@@ -30,3 +30,11 @@
     background-color: orange;
     color: white;
 }
+
+.Topbar .pic {
+    position: absolute;
+    left: 1465px;
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+}

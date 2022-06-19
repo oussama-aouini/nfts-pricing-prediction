@@ -9,3 +9,74 @@
     overflow: hidden;
     color: white;
 }
+
+.history-list {
+    /* background-color: #273442; */
+    width: 60vw;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.hist-options {
+    background-color: #0f0f0f;
+    width: 25vw;
+    height: 100%;
+    text-align: center;
+}
+
+.hist-element {
+    margin-top: 20px;
+    margin-left: 65px;
+    background-color: #0f0f0f;
+    width: 700px;
+    height: 270px;
+    border-radius: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.hist-element img {
+    height: 230px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.options {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin-left: 40px;
+    font-size: 1.1em;
+}
+
+.option {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.description {
+    margin-left: 30px;
+}
+
+.history-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.history-list::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.history-list::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.history-list:hover::-webkit-scrollbar-thumb {
+    background: #4A4A4A; 
+}

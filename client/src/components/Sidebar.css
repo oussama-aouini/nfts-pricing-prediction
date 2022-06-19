@@ -23,7 +23,7 @@
 .sidebar-tab p {
     font-family: sans-serif;
     font-weight: bold;
-    padding-left: 5px;
+    padding-left: 10px;
     padding-top: 2px;
 }
 
@@ -45,7 +45,7 @@
 .active-sidebar-tab p {
     font-family: sans-serif;
     font-weight: bold;
-    padding-left: 5px;
+    padding-left: 10px;
     padding-top: 2px;
 }
 
