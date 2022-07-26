@@ -29,9 +29,33 @@ def avg_price_preprocessor(raw_data):
     return full_time_frame
 
 def floor_price_preprocessor(raw_data):
-    # return floor_price_data
-    pass
+    start = raw_data.date.min()
+    end = raw_data.date.max() 
+
+
+    index = pd.date_range(start, end, freq='D')
+    columns = ['Fprice']
+    fprice = pd.DataFrame(index=index, columns=columns)
+
+    fprice_with_missing_days = raw_data.groupby('date').price.min()
+
+    for index, value in fprice_with_missing_days.items():
+        fprice.loc[index] = value
+    fprice['Fprice'] = fprice.Fprice.fillna(fprice.Fprice.mean())
+    return fprice
 
 def sales_volume_preprocessor(raw_data):
-    # return sales_volume_data
-    pass
+    start = raw_data.date.min()
+    end = raw_data.date.max()
+
+    index = pd.date_range(start, end, freq='D')
+    columns = ['Sales']
+    sales = pd.DataFrame(index=index, columns=columns)
+
+    sales_with_missing_days = raw_data.groupby('date').date.count()
+
+    for index, value in sales_with_missing_days.items():
+        sales.loc[index] = value
+
+    sales['Sales'] = sales.Sales.fillna(0)
+    return sales

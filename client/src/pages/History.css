@@ -19,7 +19,7 @@
 }
 
 .hist-options {
-    background-color: #0f0f0f;
+    background-color: #1e2225;
     width: 25vw;
     height: 100%;
     text-align: center;
@@ -28,7 +28,7 @@
 .hist-element {
     margin-top: 20px;
     margin-left: 65px;
-    background-color: #0f0f0f;
+    background-color: #1e2225;
     width: 700px;
     height: 270px;
     border-radius: 10px;
@@ -79,4 +79,65 @@
 
 .history-list:hover::-webkit-scrollbar-thumb {
     background: #4A4A4A; 
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+
+.filters input {
+    align-self: center;
+    background-color: #181818;
+    border: none;
+    width: 250px;
+    height: 35px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.time-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+.hist-options h2 {
+    margin-bottom: 0px;
+}
+
+.time-filter {
+    margin-bottom: 15px;
+    background-color: #181818;
+    width: 190px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.time-filter:hover {
+    cursor: pointer;
+}
+
+.selected-filter {
+    width: 20px;
+    height: 20px;
+    background-color: aquamarine;
+    position: absolute;
+    left: 15px;
+    border-radius: 10px;
 }

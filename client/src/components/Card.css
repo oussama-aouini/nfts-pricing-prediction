@@ -1,7 +1,6 @@
 .Card img {
     width: 210px;
     height: 200px;
-    
     margin: 0px;
 }
 
@@ -18,8 +17,8 @@
     justify-content: center;
     align-items: center;
     background-color: #1E2225;
-    width: 240px;
-    height: 245px;
+    width: 245px;
+    height: 260px;
     margin: 25px;
     padding: 0px;
     border-radius: 10px;
@@ -30,3 +29,9 @@
     transform: scale(1.2);
     z-index: 2;
 }
+
+.Card p {
+    margin-top: 10px;
+    font-size: 1.3em;
+}
+

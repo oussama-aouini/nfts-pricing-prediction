@@ -30,7 +30,7 @@ const App = () => {
             <div className='content'>  
               <Sidebar />
               <Route path='/' exact component={Home} />
-              <Route path='/profile' component={Profile} />
+              <ProtectedRoute path='/profile' component={Profile} />
               <Route path='/favorite' component={Favorite} />
               <Route path='/history' component={History} />
               <Route path='/collection/:id' component={ChartPage} />

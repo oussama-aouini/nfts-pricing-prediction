@@ -3,9 +3,49 @@
     height: 92vh;
     width: 85vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     margin: 0;
     overflow: hidden;
     color: white;
+    flex-wrap: wrap;
+}
+
+.fav-card {
+    background-color: #1E2225;
+    width: 270px;
+    height: 310px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fav-card img {
+    height: 220px;
+    width: 220px;border-radius: 10px;
+}
+
+.fav-card-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.fav-btn {
+    margin-left: 10px;
+}
+
+.fav-btn:hover {
+    cursor: pointer;
+}
+
+.fav-card img:hover {
+    cursor: pointer;
+    height: 250px;
+    width: 250px;
 }

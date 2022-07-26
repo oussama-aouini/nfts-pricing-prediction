@@ -4,6 +4,9 @@ import "./Searchbar.css";
 
 import SearchIcon from "@mui/icons-material/Search";
 
+import { Redirect } from "react-router-dom";
+
+
 function Searchbar() {
   const [searchResults, setSearchResults] = useState([]);
   const [searchInput, setSearchInput] = useState("");
